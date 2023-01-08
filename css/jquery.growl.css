@@ -1,0 +1,262 @@
+/* jQuery Growl
+ * Copyright 2015 Kevin Sylvestre
+ * 1.3.5
+ */
+.ontop, #growls-default, #growls-tl, #growls-tr, #growls-bl, #growls-br, #growls-tc, #growls-bc, #growls-cc, #growls-cl, #growls-cr {
+  z-index: 50000;
+  position: fixed; }
+
+#growls-default {
+  top: 10px;
+  right: 10px; }
+#growls-tl {
+  top: 10px;
+  left: 10px; }
+#growls-tr {
+  top: 10px;
+  right: 10px; }
+#growls-bl {
+  bottom: 10px;
+  left: 10px; }
+#growls-br {
+  bottom: 10px;
+  right: 10px; }
+#growls-tc {
+  top: 10px;
+  right: 10px;
+  left: 10px; }
+#growls-bc {
+  bottom: 10px;
+  right: 10px;
+  left: 10px; }
+#growls-cc {
+  top: 50%;
+  left: 50%;
+  margin-left: -125px; }
+#growls-cl {
+  top: 50%;
+  left: 10px; }
+#growls-cr {
+  top: 50%;
+  right: 10px; }
+#growls-tc .growl, #growls-bc .growl {
+  margin-left: auto;
+  margin-right: auto; }
+
+.growl {
+     font-family: 'Roboto', sans-serif;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,.2);
+    
+  position: relative;
+  border-radius:4px;
+    
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+  .growl.growl-incoming {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  .growl.growl-outgoing {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  .growl.growl-small {
+    width: 200px;
+    padding: 5px;
+    margin: 5px; }
+  .growl.growl-medium {
+    width: 250px;
+    padding: 10px;
+    margin: 10px; 
+}
+
+  .growl.growl-large {
+    width: 300px;
+    padding: 15px;
+    margin: 15px; }
+
+  .growl .growl-close {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: normal;
+     font-family: 'Roboto', sans-serif;
+      padding-right: 10px;
+      position: relative;
+      z-index: 10;
+}
+
+  .growl .growl-title {
+    font-size: 14px;
+    line-height: 22px; 
+      font-weight: 400;
+      position: relative;
+      padding-left: 35px;
+   }
+
+.growl .growl-title::before{
+content: "";
+position: absolute;
+z-index: 100000;
+left: 5px;
+top: 100%;
+margin-top: -24px;
+display: inline-block;
+width: 24px;
+height: 24px;
+background: url(../img/check.svg);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+
+}
+
+
+  .growl .growl-message {
+    font-size: 14px;
+    line-height: 18px; 
+  }
+
+/* Red */
+.growl.growl-examfailed {
+    color: #FFF;
+    background: rgb(216, 58, 82);
+}
+.growl.growl-error {
+    color: #FFF;
+    background: rgb(216, 58, 82);
+}
+
+.growl.growl-examfailed .growl-title::before,
+.growl.growl-error  .growl-title::before{
+content: "";
+position: absolute;
+z-index: 100000;
+left: 5px;
+top: 100%;
+margin-top: -24px;
+display: inline-block;
+width: 24px;
+height: 24px;
+background: url(../img/x.svg);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+
+
+/* Green */
+.growl.growl-exampassed {
+    color: #FFF;
+    background: rgb(37, 135, 80); 
+}
+.growl.growl-notice {
+    color: #FFF;
+    background: rgb(37, 135, 80);
+}
+.growl.growl-prfin {
+    color: #FFF;
+    background: rgb(37, 135, 80);
+}
+
+.growl.growl-exampassed .growl-title::before,
+.growl.growl-notice .growl-title::before,
+.growl.growl-prfin .growl-title::before{
+content: "";
+position: absolute;
+z-index: 100000;
+left: 5px;
+top: 100%;
+margin-top: -24px;
+display: inline-block;
+width: 24px;
+height: 24px;
+background: url(../img/check.svg);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+
+
+
+/* Yellow */
+.growl.growl-warning {
+    color: #FFF;
+    background: rgb(234, 189, 0);
+}
+.growl.growl-warning  .growl-title::before{
+content: "";
+position: absolute;
+z-index: 100000;
+left: 5px;
+top: 100%;
+margin-top: -24px;
+display: inline-block;
+width: 24px;
+height: 24px;
+background: url(../img/coins.svg);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+
+/* Grey */
+.growl.growl-prstart {
+    color: #FFF;
+    background: rgb(0, 115, 234);
+}
+.growl.growl-info {
+    color: #FFF;
+    background: rgb(0, 115, 234);
+}
+.growl.growl-new {
+    color: #FFF;
+    background: rgb(0, 115, 234);
+}
+.growl.growl-default {
+    color: #FFF;
+    background: rgb(0, 115, 234);
+}
+
+.growl.growl-prstart .growl-title::before,
+.growl.growl-info .growl-title::before,
+.growl.growl-new .growl-title::before,
+.growl.growl-default .growl-title::before {
+content: "";
+position: absolute;
+z-index: 100000;
+left: 5px;
+top: 100%;
+margin-top: -24px;
+display: inline-block;
+width: 24px;
+height: 24px;
+background: url(../img/info.svg);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+
+
+
+
+.growl.growl-prstart  .growl-message {
+    display: none;
+}
+.growl.growl-prfin  .growl-message {
+    display: none;
+}
+.growl.growl-examfailed  .growl-message {
+    display: none;
+}
+.growl.growl-exampassed  .growl-message {
+    display: none;
+}
+.growl.growl-new  .growl-message {
+    display: none;
+}

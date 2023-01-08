@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Climate Boss Game</title>
+    <meta charset="UTF-8">
+    <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
+    <link href="fonts/all.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+      <div class="game_wrapper">
+       <div class="overlay">
+        <div class="modalf">
+         <p class="head1">Are you sure?</p>
+          <p class="header">Looks like you could do more this year.</p>
+
+            <div class="buttons">
+                <a class="button " href="#" id="continue">Continue Anyway</a>
+                <a class="button " href="#" id="return">Return Back</a>
+
+            </div>
+        </div>
+      </div>
+      <div class="poster"></div>
+      <div class="modals">
+          <div class="left_bar">
+            <div class="mini_modal stats">
+              <p class="header_2 current_date"></p>
+              <p class="text_1"><img src="img/coinsblack.svg"> <span class="score_label"></span></p>
+            </div>
+            
+            <div class="mini_modal projects">
+              <p class="header_2">Projects</p>
+              <div class="projects_box"></div>
+            </div>
+          </div>
+          
+          <div class="modal mainModal">
+              <div class="academy modal_section storyOne" id="ac" style="display: none;">
+                  <div class="header_with_button">
+                       <div class="insd">
+                            <a class="storyButton button" href="#" id="back_button"> <i class="fa-solid fa-arrow-left"></i>Back</a>
+                       </div>
+                       <div class="insd title">
+                            <p class="header_1">Academy</p>
+                       </div>
+                       <div class="insd"></div>
+                  </div>
+                  
+                  <p class="header_2">Available skills:</p>
+                  
+                  <div class="skills_wrapper available_skills">
+                  
+                  </div>
+                  
+                  <p class="header_2">Achieved skills:</p>
+                  <div class="skills_wrapper achieved_skills">
+                  
+                  </div>
+              </div>
+              
+              <div class="examintaion modal_section storyOne" id="ex" style="display: none;">
+                <p class="header_1 heads"></p>
+                
+                <div class="exam_quest_wrapper"></div>
+              </div>
+              
+              <div class="timer">
+                <img src="img/time.gif">
+                <div class="quote" style="display: none;">
+                    <p class="q"><span class="q_brackets">"</span><span class="q_text"></span><span class="q_brackets">"</span></p>  
+                    <p class="author"></p>
+                </div>
+              </div>
+              
+              <div class="rankPage" style="display: none;">
+                  <p class="title">Your rank is:</p>
+                  <img src="img/badges/badge1.png" class="badge">
+                  <p class="rank">Climate Recruit</p>
+                  <p class="lozung">You can do more!</p>
+                  <p class="canmore">You need <span class="needmore">100</span> points more to reach the next rank.</p>
+                  <a class="button " href="#" id="playAgain">Play Again</a>
+              </div>
+              
+              <div class="regularStories"></div>
+              
+              <div class="projects modal_section storyOne" id="pr" style="display: none;">
+                   <div class="header_with_button">
+                       <div class="insd">
+                            <a class="storyButton button" href="#" id="back_button"> <i class="fa-solid fa-arrow-left"></i>Back</a>
+                       </div>
+                       <div class="insd title">
+                            <p class="header_1">Workshop</p>
+                       </div>
+                       <div class="insd"></div>
+                  </div>
+                  
+                  <p class="header_2">Available projects:</p>
+                  <div class="projects_wrapper available_projects">
+                      
+                  </div>
+                  
+                  <p class="header_2">In Progress:</p>
+                  <div class="projects_wrapper progress_projects"></div>
+                  
+                  <p class="header_2">Finished:</p>
+                  <div class="projects_wrapper finished_projects"></div>
+              </div>
+          </div>
+      </div>
+      </div>
+      
+      <div class="preload" style="display: none;">
+        <img src="img/skills/activist.png">
+        <img src="img/skills/deforest.png">
+        <img src="img/skills/gasses.png">
+        <img src="img/skills/science.png">
+        <img src="img/skills/sealevel.png">
+        <img src="img/skills/temperature.png">
+          
+        <img src="img/projects/project1.png">
+        <img src="img/projects/project2.png">
+        <img src="img/projects/project3.png">
+        <img src="img/projects/project4.png">
+        <img src="img/projects/project5.png">
+        <img src="img/projects/project6.png">
+          
+        <img src="img/learning/activism1.png">
+        <img src="img/learning/activism2.png">
+        <img src="img/learning/activism3.png">
+        <img src="img/learning/deforest1.png">
+        <img src="img/learning/deforest2.png">
+        <img src="img/learning/deforest3.png">
+        <img src="img/learning/flood1.png">
+        <img src="img/learning/gasses1.png">
+        <img src="img/learning/gasses2.png">
+        <img src="img/learning/gasses3.png">
+        
+        <img src="img/learning/science1.png">
+        <img src="img/learning/science2.png">
+          
+        <img src="img/learning/temperature1.png">
+        <img src="img/learning/temperature2.png">
+        <img src="img/learning/temperature3.png">
+          
+        <img src="img/check.svg">
+        <img src="img/coins.svg">
+        <img src="img/info.svg">
+        <img src="img/x.svg">
+      </div>
+  </body>
+  
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/date.js"></script>
+    
+  <script src="js/objects.js"></script>
+  <script src="js/storyDB.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/load.js"></script>
+  <script src="js/update.js"></script>
+    
+  <script src="js/jquery.growl.js" type="text/javascript"></script>
+    
+  <script src="js/main.js"></script>  
+  <script src="js/exam.js"></script>
+  
+</html>
